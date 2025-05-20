@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Story | TEXPRO CORP</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/premium-styles.css">
+    <style>
+        /* Video Showcase Section - Redesign */
+        .video-showcase-section {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+        
+        .video-showcase-section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+        
+        .video-showcase-section p.subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .video-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .video-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+        
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            background: #000;
+        }
+        
+        .video-player {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .video-overlay:hover {
+            background: rgba(0,0,0,0.5);
+        }
+        
+        .video-overlay i {
+            font-size: 80px;
+            color: rgba(255,255,255,0.9);
+            transition: transform 0.3s ease;
+        }
+        
+        .video-overlay:hover i {
+            transform: scale(1.1);
+        }
+        
+        .video-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+        }
+        
+        .video-caption h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        
+        .video-caption p {
+            margin: 5px 0 0;
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .video-showcase-section {
+                padding: 50px 0;
+            }
+            
+            .video-showcase-section h2 {
+                font-size: 2rem;
+            }
+            
+            .video-overlay i {
+                font-size: 60px;
+            }
+            
+            .video-caption h3 {
+                font-size: 1.2rem;
+            }
+            
+            .video-caption p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Texpro Corp Logo">
+            </a>
+            
+            <nav class="nav">
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">ACCUEIL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="departement.html" class="nav-link">DEPARTEMENT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="certificat.html" class="nav-link">CERTIFICAT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="showroom.html" class="nav-link">SHOWROOM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="social-story.html" class="nav-link active">SOCIAL STORY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1 data-aos="fade-up">OUR SOCIAL IMPACT</h1>
+        </div>
+    </section>
+
+    <!-- Video Showcase Section - Redesigned -->
+    <section class="video-showcase-section">
+        <div class="container">
+            <h2 data-aos="fade-up">Our Story in Motion</h2>
+            <p class="subtitle" data-aos="fade-up" data-aos-delay="100">
+                Discover how Texpro Corp is weaving sustainability, innovation, and social responsibility into every thread of our business
+            </p>
+            
+            <div class="video-gallery">
+                <!-- Video 1 -->
+                <div class="video-container" data-aos="fade-up" data-aos-delay="200">
+                    <div class="video-wrapper">
+                        <video class="video-player" poster="images/social_story_image.jpeg">
+                            <source src="videos/videoStory1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                     
+                    </div>
+                </div>
+                
+                <!-- Video 2 -->
+                <div class="video-container" data-aos="fade-up" data-aos-delay="300">
+                    <div class="video-wrapper">
+                        <video class="video-player" poster="images/social_story_image.jpeg">
+                            <source src="videos/videoStory2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                     
+                    </div>
+                </div>
+                
+                <!-- Video 3 -->
+                <div class="video-container" data-aos="fade-up" data-aos-delay="400">
+                    <div class="video-wrapper">
+                        <video class="video-player" poster="images/social_story_image.jpeg">
+                            <source src="videos/videoStory3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-section">
+                <h3 class="footer-title">TEXPRO CORP</h3>
+                <p>Textile manufacturer since 1998 based in Tunisia in the EUR-MED zone. Specialized in denim and flat garment manufacturing.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="index.html">Home</a></li>
+                    <li class="footer-link"><a href="about.html">About Us</a></li>
+                    <li class="footer-link"><a href="departement.html">Departments</a></li>
+                    <li class="footer-link"><a href="certificat.html">Certificates</a></li>
+                    <li class="footer-link"><a href="showroom.html">Showroom</a></li>
+                    <li class="footer-link"><a href="social-story.html">Social Story</a></li>
+                    <li class="footer-link"><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Habib Bourguiba-5015 Bouhjar</p>
+                <p><i class="fas fa-phone"></i> +216 73 434 250</p>
+                <p><i class="fas fa-fax"></i> +216 73 434 251</p>
+                <p><i class="fas fa-globe"></i> www.texprocorp.com</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 TEXPRO CORP. All Rights Reserved.</p>
+                <p>NOTHING IS MORE EXPENSIVE THAN A BAD QUALITY.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/premium-main.js"></script>
+    
+    <!-- Video Player Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                easing: 'ease',
+                once: true
+            });
+            
+            // Video overlay click handlers
+            const videoOverlays = document.querySelectorAll('.video-overlay');
+            
+            videoOverlays.forEach(overlay => {
+                overlay.addEventListener('click', function() {
+                    const videoWrapper = this.parentElement;
+                    const video = videoWrapper.querySelector('video');
+                    
+                    // Hide overlay
+                    this.style.display = 'none';
+                    
+                    // Play video
+                    video.play();
+                    
+                    // Show controls
+                    video.setAttribute('controls', 'true');
+                    
+                    // When video ends, show overlay again
+                    video.addEventListener('ended', function() {
+                        overlay.style.display = 'flex';
+                        video.removeAttribute('controls');
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
