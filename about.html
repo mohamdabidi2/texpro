@@ -19,6 +19,70 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/premium-styles.css">
+    
+    <style>
+        /* Brand Carousel Styles */
+        .brand-carousel {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            background: #f8f9fa;
+            padding: 40px 0;
+        }
+        
+        .carousel-track {
+            display: flex;
+            animation: scroll 20s linear infinite;
+            width: calc(200% + 40px);
+        }
+        
+        .brand-item {
+            flex: 0 0 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            height: 80px;
+        }
+        
+        .brand-item img {
+            max-width: 100%;
+            max-height: 60px;
+            object-fit: contain;
+            filter: grayscale(100%) brightness(0.7);
+            transition: all 0.3s ease;
+            opacity: 0.8;
+        }
+        
+        .brand-item img:hover {
+            filter: grayscale(0%) brightness(1);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+        
+        @media (max-width: 768px) {
+            .brand-item {
+                flex: 0 0 20%;
+            }
+            
+            .brand-item img {
+                max-height: 40px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -113,63 +177,70 @@
             <h2>Our Brand Partners</h2>
             <p class="text-center" data-aos="fade-up" data-aos-delay="100">We are proud to work with some of the world's most respected brands in the fashion industry.</p>
             
-            <div class="brand-partners" data-aos="fade-up" data-aos-delay="200">
-                <div class="brand-logo-container">
-                    <span class="brand-name">MISS SIXTY</span>
-                </div>
-                <div class="brand-logo-container">
-                    <span class="brand-name">Timberland</span>
-                </div>
-                <div class="brand-logo-container">
-                    <span class="brand-name">BOGNER</span>
-                </div>
-                <div class="brand-logo-container">
-                    <span class="brand-name">Boden</span>
-                </div>
-                <div class="brand-logo-container">
-                    <span class="brand-name">Levi's</span>
-                </div>
-                <div class="brand-logo-container">
-                    <span class="brand-name">Ralph Lauren</span>
-                </div>
-                <div class="brand-logo-container">
-                    <span class="brand-name">Lee Cooper</span>
-                </div>
-                <div class="brand-logo-container">
-                    <span class="brand-name">Energie</span>
-                </div>
-                <div class="brand-logo-container">
-                    <span class="brand-name">SISSY-BOY</span>
-                </div>
-                <div class="brand-logo-container">
-                    <span class="brand-name">Jane Blue Paris</span>
-                </div>
-                <div class="brand-logo-container">
-                    <span class="brand-name">IKKS</span>
-                </div>
-                <div class="brand-logo-container">
-                    <span class="brand-name">VISTULA</span>
-                </div>
-                <div class="brand-logo-container">
-                    <span class="brand-name">OXBOW</span>
-                </div>
-                <div class="brand-logo-container">
-                    <span class="brand-name">Jack Wills</span>
-                </div>
-                <div class="brand-logo-container">
-                    <span class="brand-name">cop. copine</span>
-                </div>
-                <div class="brand-logo-container">
-                    <span class="brand-name">Hod Paris</span>
-                </div>
-                <div class="brand-logo-container">
-                    <span class="brand-name">MKT Studio</span>
-                </div>
-                <div class="brand-logo-container">
-                    <span class="brand-name">TAKE TWO</span>
-                </div>
-                <div class="brand-logo-container">
-                    <span class="brand-name">Cimarron</span>
+            <div class="brand-carousel" data-aos="fade-up" data-aos-delay="200">
+                <div class="carousel-track">
+                    <!-- First set of images -->
+                    <div class="brand-item">
+                        <img src="images/brands/MISS SIXTY.jpg" alt="Miss Sixty">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/brands/Timberland.png" alt="Timberland">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/brands/BOGNER.png" alt="Bogner">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/brands/Boden.png" alt="Boden">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/brands/Levis.png" alt="Levi's">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/brands/RalphLauren.png" alt="Ralph Lauren">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/brands/Lee Cooper.png" alt="Lee Cooper">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/brands/Energie.png" alt="Energie">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/brands/sissyboy.png" alt="Sissy Boy">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/brands/janeblueparis.png" alt="Jane Blue Paris">
+                    </div>
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="brand-item">
+                        <img src="images/brands/IKKS.png" alt="IKKS">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/brands/VISTULA.png" alt="Vistula">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/brands/OXBOW.jpg" alt="Oxbow">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/brands/ajckwills.png" alt="Jack Wills">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/brands/cop. copine.png" alt="Cop Copine">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/brands/Hod Paris.jpeg" alt="Hod Paris">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/brands/MKT Studio.webp" alt="MKT Studio">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/brands/MISS SIXTY.jpg" alt="Miss Sixty">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/brands/Timberland.png" alt="Timberland">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/brands/BOGNER.png" alt="Bogner">
+                    </div>
                 </div>
             </div>
         </div>
@@ -243,3 +314,4 @@
     <script src="js/premium-main.js"></script>
 </body>
 </html>
+
