@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Showroom | TEXPRO CORP</title>
-    
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+
     <!-- AOS Animation Library -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/premium-styles.css">
-    
+
     <!-- Image Modal CSS -->
     <style>
         /* Image Modal Styles */
@@ -34,13 +37,13 @@
             background-color: rgba(0, 0, 0, 0.9);
             animation: fadeIn 0.3s ease;
         }
-        
+
         .image-modal.active {
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        
+
         .modal-content {
             position: relative;
             max-width: 90%;
@@ -48,7 +51,7 @@
             margin: auto;
             animation: zoomIn 0.3s ease;
         }
-        
+
         .modal-image {
             width: 100%;
             height: auto;
@@ -58,7 +61,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
         }
-        
+
         .modal-close {
             position: absolute;
             top: -40px;
@@ -73,11 +76,11 @@
             line-height: 1;
             transition: color 0.3s ease;
         }
-        
+
         .modal-close:hover {
             color: #ccc;
         }
-        
+
         .modal-title {
             position: absolute;
             bottom: -40px;
@@ -89,32 +92,38 @@
             font-weight: 500;
             margin: 0;
         }
-        
+
         .gallery-img {
             cursor: pointer;
             transition: transform 0.3s ease;
         }
-        
+
         .gallery-img:hover {
             transform: scale(1.05);
         }
-        
+
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
-        
+
         @keyframes zoomIn {
-            from { 
+            from {
                 opacity: 0;
                 transform: scale(0.8);
             }
-            to { 
+
+            to {
                 opacity: 1;
                 transform: scale(1);
             }
         }
-        
+
         /* Custom Gallery Layout - 300px Height with Auto Width */
         .gallery {
             display: flex;
@@ -124,7 +133,7 @@
             align-items: flex-start;
             padding: 20px 0;
         }
-        
+
         .gallery-item {
             position: relative;
             height: 300px;
@@ -135,12 +144,12 @@
             transition: all 0.3s ease;
             background: #fff;
         }
-        
+
         .gallery-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
         }
-        
+
         .gallery-item img {
             width: 100%;
             height: 100%;
@@ -148,11 +157,11 @@
             object-position: center;
             transition: transform 0.3s ease;
         }
-        
+
         .gallery-item:hover img {
             transform: scale(1.1);
         }
-        
+
         .gallery-overlay {
             position: absolute;
             bottom: 0;
@@ -164,45 +173,45 @@
             transform: translateY(100%);
             transition: transform 0.3s ease;
         }
-        
+
         .gallery-item:hover .gallery-overlay {
             transform: translateY(0);
         }
-        
+
         .gallery-title {
             margin: 0;
             font-size: 16px;
             font-weight: 600;
             text-align: center;
         }
-        
+
         /* Mobile responsive */
         @media (max-width: 768px) {
             .modal-content {
                 max-width: 95%;
                 max-height: 85%;
             }
-            
+
             .modal-close {
                 top: -35px;
                 font-size: 30px;
             }
-            
+
             .modal-title {
                 bottom: -35px;
                 font-size: 16px;
             }
-            
+
             .gallery {
                 gap: 15px;
                 padding: 15px 0;
             }
-            
+
             .gallery-item {
                 height: 250px;
             }
         }
-        
+
         @media (max-width: 480px) {
             .gallery-item {
                 height: 200px;
@@ -210,6 +219,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -217,7 +227,7 @@
             <a href="index.html" class="logo">
                 <img src="images/logo.png" alt="Texpro Corp Logo">
             </a>
-            
+
             <nav class="nav">
                 <button class="menu-toggle">
                     <i class="fas fa-bars"></i>
@@ -264,271 +274,368 @@
                 <button class="filter-btn" data-filter="women">Women</button>
                 <button class="filter-btn" data-filter="men">Men</button>
             </div>
-            
+
             <div class="gallery">
                 <!-- Women's Collection -->
                 <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="100">
-                    <img src="images/WOMAN SHOOTING/image00001.jpeg" alt="Women's Collection" class="gallery-img">
+                    <img src="images/WOMAN SHOOTING/image00001.jpg" alt="Women's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Women's Collection 1</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="200">
-                    <img src="images/WOMAN SHOOTING/image00002.jpeg" alt="Women's Collection" class="gallery-img">
+                    <img src="images/WOMAN SHOOTING/image00002.jpg" alt="Women's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Women's Collection 2</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="300">
-                    <img src="images/WOMAN SHOOTING/image00003.jpeg" alt="Women's Collection" class="gallery-img">
+                    <img src="images/WOMAN SHOOTING/image00003.jpg" alt="Women's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Women's Collection 3</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="400">
-                    <img src="images/WOMAN SHOOTING/image00004.jpeg" alt="Women's Collection" class="gallery-img">
+                    <img src="images/WOMAN SHOOTING/image00004.jpg" alt="Women's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Women's Collection 4</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="500">
-                    <img src="images/WOMAN SHOOTING/image00005.jpeg" alt="Women's Collection" class="gallery-img">
+                    <img src="images/WOMAN SHOOTING/image00005.jpg" alt="Women's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Women's Collection 5</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="600">
-                    <img src="images/WOMAN SHOOTING/image00006.jpeg" alt="Women's Collection" class="gallery-img">
+                    <img src="images/WOMAN SHOOTING/image00006.jpg" alt="Women's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Women's Collection 6</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="700">
-                    <img src="images/WOMAN SHOOTING/image00007.jpeg" alt="Women's Collection" class="gallery-img">
+                    <img src="images/WOMAN SHOOTING/image00007.jpg" alt="Women's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Women's Collection 7</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="800">
-                    <img src="images/WOMAN SHOOTING/image00008.jpeg" alt="Women's Collection" class="gallery-img">
+                    <img src="images/WOMAN SHOOTING/image00008.jpg" alt="Women's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Women's Collection 8</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="900">
-                    <img src="images/WOMAN SHOOTING/image00009.jpeg" alt="Women's Collection" class="gallery-img">
+                    <img src="images/WOMAN SHOOTING/image00009.jpg" alt="Women's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Women's Collection 9</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="1000">
-                    <img src="images/WOMAN SHOOTING/image00010.jpeg" alt="Women's Collection" class="gallery-img">
+                    <img src="images/WOMAN SHOOTING/image00010.jpg" alt="Women's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Women's Collection 10</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="1100">
-                    <img src="images/WOMAN SHOOTING/image00011.jpeg" alt="Women's Collection" class="gallery-img">
+                    <img src="images/WOMAN SHOOTING/image00011.jpg" alt="Women's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Women's Collection 11</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="1200">
-                    <img src="images/WOMAN SHOOTING/image00012.jpeg" alt="Women's Collection" class="gallery-img">
+                    <img src="images/WOMAN SHOOTING/image00012.jpg" alt="Women's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Women's Collection 12</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="1300">
-                    <img src="images/WOMAN SHOOTING/image00013.jpeg" alt="Women's Collection" class="gallery-img">
+                    <img src="images/WOMAN SHOOTING/image00013.jpg" alt="Women's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Women's Collection 13</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="1400">
-                    <img src="images/WOMAN SHOOTING/image00014.jpeg" alt="Women's Collection" class="gallery-img">
+                    <img src="images/WOMAN SHOOTING/image00014.jpg" alt="Women's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Women's Collection 14</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="1500">
-                    <img src="images/WOMAN SHOOTING/image00015.jpeg" alt="Women's Collection" class="gallery-img">
+                    <img src="images/WOMAN SHOOTING/image00015.jpg" alt="Women's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Women's Collection 15</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="1600">
-                    <img src="images/WOMAN SHOOTING/image00016.jpeg" alt="Women's Collection" class="gallery-img">
+                    <img src="images/WOMAN SHOOTING/image00016.jpg" alt="Women's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Women's Collection 16</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="1700">
-                    <img src="images/WOMAN SHOOTING/image00017.jpeg" alt="Women's Collection" class="gallery-img">
+                    <img src="images/WOMAN SHOOTING/image00017.jpg" alt="Women's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Women's Collection 17</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="1800">
-                    <img src="images/WOMAN SHOOTING/image00018.jpeg" alt="Women's Collection" class="gallery-img">
+                    <img src="images/WOMAN SHOOTING/image00018.jpg" alt="Women's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Women's Collection 18</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="1900">
-                    <img src="images/WOMAN SHOOTING/image00019.jpeg" alt="Women's Collection" class="gallery-img">
+                    <img src="images/WOMAN SHOOTING/image00019.jpg" alt="Women's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Women's Collection 19</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="2000">
-                    <img src="images/WOMAN SHOOTING/image00020.jpeg" alt="Women's Collection" class="gallery-img">
+                    <img src="images/WOMAN SHOOTING/image00020.jpg" alt="Women's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Women's Collection 20</h4>
                     </div>
                 </div>
-                
-                <!-- Men's Collection -->
-                <div class="gallery-item" data-category="men" data-aos="fade-up" data-aos-delay="100">
-                    <img src="images/MEN SHOOTING/111.jpg" alt="Men's Collection" class="gallery-img">
+                <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="2100">
+                    <img src="images/WOMAN SHOOTING/image00021.jpg" alt="Women's Collection" class="gallery-img">
                     <div class="gallery-overlay">
-                        <h4 class="gallery-title">Men's Collection 1</h4>
+                        <h4 class="gallery-title">Women's Collection 21</h4>
                     </div>
                 </div>
-                
+                <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="2200">
+                    <img src="images/WOMAN SHOOTING/image00022.jpg" alt="Women's Collection" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Women's Collection 22</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="2300">
+                    <img src="images/WOMAN SHOOTING/image00023.jpg" alt="Women's Collection" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Women's Collection 23</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="2400">
+                    <img src="images/WOMAN SHOOTING/image00024.jpg" alt="Women's Collection" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Women's Collection 24</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="2500">
+                    <img src="images/WOMAN SHOOTING/image00025.jpg" alt="Women's Collection" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Women's Collection 25</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="2600">
+                    <img src="images/WOMAN SHOOTING/image00026.jpg" alt="Women's Collection" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Women's Collection 26</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="2700">
+                    <img src="images/WOMAN SHOOTING/image00027.jpg" alt="Women's Collection" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Women's Collection 27</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="2800">
+                    <img src="images/WOMAN SHOOTING/image00028.jpg" alt="Women's Collection" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Women's Collection 28</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="2900">
+                    <img src="images/WOMAN SHOOTING/image00029.jpg" alt="Women's Collection" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Women's Collection 29</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="3000">
+                    <img src="images/WOMAN SHOOTING/image00030.jpg" alt="Women's Collection" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Women's Collection 30</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="3100">
+                    <img src="images/WOMAN SHOOTING/image00031.jpg" alt="Women's Collection" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Women's Collection 31</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="3200">
+                    <img src="images/WOMAN SHOOTING/image00032.jpg" alt="Women's Collection" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Women's Collection 32</h4>
+                    </div>
+                </div>
+                  <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="3300">
+                    <img src="images/WOMAN SHOOTING/image00033.jpg" alt="Women's Collection" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Women's Collection 33</h4>
+                    </div>
+                </div>
+                  <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="3400">
+                    <img src="images/WOMAN SHOOTING/image00034.jpg" alt="Women's Collection" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Women's Collection 34</h4>
+                    </div>
+                </div>
+                  <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="3500">
+                    <img src="images/WOMAN SHOOTING/image00035.jpg" alt="Women's Collection" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Women's Collection 35</h4>
+                    </div>
+                </div>
+                  <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="3600">
+                    <img src="images/WOMAN SHOOTING/image00036.jpg" alt="Women's Collection" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Women's Collection 36</h4>
+                    </div>
+                </div>
+                  <div class="gallery-item" data-category="women" data-aos="fade-up" data-aos-delay="3700">
+                    <img src="images/WOMAN SHOOTING/image00037.jpg" alt="Women's Collection" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Women's Collection 37</h4>
+                    </div>
+                </div>
+                <!-- Men's Collection -->
+               
+
                 <div class="gallery-item" data-category="men" data-aos="fade-up" data-aos-delay="200">
-                    <img src="images/MEN SHOOTING/image00001.jpeg" alt="Men's Collection" class="gallery-img">
+                    <img src="images/MEN SHOOTING/image00001.jpg" alt="Men's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Men's Collection 2</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="men" data-aos="fade-up" data-aos-delay="300">
-                    <img src="images/MEN SHOOTING/image00003.jpeg" alt="Men's Collection" class="gallery-img">
+                    <img src="images/MEN SHOOTING/image00003.jpg" alt="Men's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Men's Collection 3</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="men" data-aos="fade-up" data-aos-delay="400">
-                    <img src="images/MEN SHOOTING/image00004.jpeg" alt="Men's Collection" class="gallery-img">
+                    <img src="images/MEN SHOOTING/image00004.jpg" alt="Men's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Men's Collection 4</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="men" data-aos="fade-up" data-aos-delay="500">
-                    <img src="images/MEN SHOOTING/image00005.jpeg" alt="Men's Collection" class="gallery-img">
+                    <img src="images/MEN SHOOTING/image00005.jpg" alt="Men's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Men's Collection 5</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="men" data-aos="fade-up" data-aos-delay="600">
-                    <img src="images/MEN SHOOTING/image00006.jpeg" alt="Men's Collection" class="gallery-img">
+                    <img src="images/MEN SHOOTING/image00006.jpg" alt="Men's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Men's Collection 6</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="men" data-aos="fade-up" data-aos-delay="700">
-                    <img src="images/MEN SHOOTING/image00007.jpeg" alt="Men's Collection" class="gallery-img">
+                    <img src="images/MEN SHOOTING/image00007.jpg" alt="Men's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Men's Collection 7</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="men" data-aos="fade-up" data-aos-delay="800">
-                    <img src="images/MEN SHOOTING/image00008.jpeg" alt="Men's Collection" class="gallery-img">
+                    <img src="images/MEN SHOOTING/image00008.jpg" alt="Men's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Men's Collection 8</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="men" data-aos="fade-up" data-aos-delay="900">
-                    <img src="images/MEN SHOOTING/image00009.jpeg" alt="Men's Collection" class="gallery-img">
+                    <img src="images/MEN SHOOTING/image00009.jpg" alt="Men's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Men's Collection 9</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="men" data-aos="fade-up" data-aos-delay="1000">
-                    <img src="images/MEN SHOOTING/image00010.jpeg" alt="Men's Collection" class="gallery-img">
+                    <img src="images/MEN SHOOTING/image00010.jpg" alt="Men's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Men's Collection 10</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="men" data-aos="fade-up" data-aos-delay="1100">
-                    <img src="images/MEN SHOOTING/image00011.jpeg" alt="Men's Collection" class="gallery-img">
+                    <img src="images/MEN SHOOTING/image00011.jpg" alt="Men's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Men's Collection 11</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="men" data-aos="fade-up" data-aos-delay="1200">
-                    <img src="images/MEN SHOOTING/image00012.jpeg" alt="Men's Collection" class="gallery-img">
+                    <img src="images/MEN SHOOTING/image00012.jpg" alt="Men's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Men's Collection 12</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="men" data-aos="fade-up" data-aos-delay="1300">
-                    <img src="images/MEN SHOOTING/image00013.jpeg" alt="Men's Collection" class="gallery-img">
+                    <img src="images/MEN SHOOTING/image00013.jpg" alt="Men's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Men's Collection 13</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="men" data-aos="fade-up" data-aos-delay="1400">
-                    <img src="images/MEN SHOOTING/image00014.jpeg" alt="Men's Collection" class="gallery-img">
+                    <img src="images/MEN SHOOTING/image00014.jpg" alt="Men's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Men's Collection 14</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="men" data-aos="fade-up" data-aos-delay="1500">
-                    <img src="images/MEN SHOOTING/image00015.jpeg" alt="Men's Collection" class="gallery-img">
+                    <img src="images/MEN SHOOTING/image00015.jpg" alt="Men's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Men's Collection 15</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="men" data-aos="fade-up" data-aos-delay="1600">
-                    <img src="images/MEN SHOOTING/image00016.jpeg" alt="Men's Collection" class="gallery-img">
+                    <img src="images/MEN SHOOTING/image00016.jpg" alt="Men's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Men's Collection 16</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="men" data-aos="fade-up" data-aos-delay="1700">
-                    <img src="images/MEN SHOOTING/image00017.jpeg" alt="Men's Collection" class="gallery-img">
+                    <img src="images/MEN SHOOTING/image00017.jpg" alt="Men's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Men's Collection 17</h4>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-category="men" data-aos="fade-up" data-aos-delay="1800">
-                    <img src="images/MEN SHOOTING/image00018.jpeg" alt="Men's Collection" class="gallery-img">
+                    <img src="images/MEN SHOOTING/image00018.jpg" alt="Men's Collection" class="gallery-img">
                     <div class="gallery-overlay">
                         <h4 class="gallery-title">Men's Collection 18</h4>
                     </div>
@@ -546,14 +653,15 @@
         </div>
     </div>
 
-    
+
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-section">
                 <h3 class="footer-title">TEXPRO CORP</h3>
-                <p>Textile manufacturer since 1998 based in Tunisia in the EUR-MED zone. Specialized in denim and flat garment manufacturing.</p>
+                <p>Textile manufacturer since 1998 based in Tunisia in the EUR-MED zone. Specialized in denim and flat
+                    garment manufacturing.</p>
                 <div class="social-icons">
                     <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
@@ -561,7 +669,7 @@
                     <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            
+
             <div class="footer-section">
                 <h3 class="footer-title">Quick Links</h3>
                 <ul class="footer-links">
@@ -574,7 +682,7 @@
                     <li class="footer-link"><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-section">
                 <h3 class="footer-title">Contact Info</h3>
                 <p><i class="fas fa-map-marker-alt"></i> Av. Habib Bourguiba-5015 Bouhjar</p>
@@ -583,7 +691,7 @@
                 <p><i class="fas fa-globe"></i> www.texprocorp.com</p>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <div class="container">
                 <p>&copy; 2025 TEXPRO CORP. All Rights Reserved.</p>
@@ -594,37 +702,37 @@
 
     <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    
+
     <!-- Custom JS -->
     <script src="js/premium-main.js"></script>
-    
+
     <!-- Gallery Filter Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Initialize AOS
             AOS.init({
                 duration: 800,
                 easing: 'ease',
                 once: true
             });
-            
+
             // Gallery Filter
             const filterBtns = document.querySelectorAll('.filter-btn');
             const galleryItems = document.querySelectorAll('.gallery-item');
-            
+
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
                     // Remove active class from all buttons
                     filterBtns.forEach(btn => {
                         btn.classList.remove('active');
                     });
-                    
+
                     // Add active class to clicked button
                     btn.classList.add('active');
-                    
+
                     // Get filter value
                     const filterValue = btn.getAttribute('data-filter');
-                    
+
                     // Filter gallery items
                     galleryItems.forEach(item => {
                         if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
@@ -643,47 +751,47 @@
                     });
                 });
             });
-            
+
             // Image Modal Functionality
             const galleryImages = document.querySelectorAll('.gallery-img');
             const modal = document.getElementById('imageModal');
             const modalImage = document.getElementById('modalImage');
             const modalTitle = document.getElementById('modalTitle');
-            
+
             // Add click event to all gallery images
             galleryImages.forEach(img => {
-                img.addEventListener('click', function() {
+                img.addEventListener('click', function () {
                     const imageSrc = this.src;
                     const imageAlt = this.alt;
                     const titleElement = this.parentElement.querySelector('.gallery-title');
                     const imageTitle = titleElement ? titleElement.textContent : imageAlt;
-                    
+
                     // Set modal content
                     modalImage.src = imageSrc;
                     modalImage.alt = imageAlt;
                     modalTitle.textContent = imageTitle;
-                    
+
                     // Show modal
                     modal.classList.add('active');
                     document.body.style.overflow = 'hidden'; // Prevent background scrolling
                 });
             });
-            
+
             // Close modal when clicking outside the image
-            modal.addEventListener('click', function(e) {
+            modal.addEventListener('click', function (e) {
                 if (e.target === modal) {
                     closeModal();
                 }
             });
-            
+
             // Close modal with Escape key
-            document.addEventListener('keydown', function(e) {
+            document.addEventListener('keydown', function (e) {
                 if (e.key === 'Escape' && modal.classList.contains('active')) {
                     closeModal();
                 }
             });
         });
-        
+
         // Close modal function
         function closeModal() {
             const modal = document.getElementById('imageModal');
@@ -692,5 +800,5 @@
         }
     </script>
 </body>
-</html>
 
+</html>
