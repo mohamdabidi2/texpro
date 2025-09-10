@@ -265,6 +265,9 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+      
+
+
     
     // GSAP animations for premium feel
     gsap.from('.hero-content', {
