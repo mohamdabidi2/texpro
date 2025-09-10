@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('click', function() {
             const imgSrc = this.querySelector('img').getAttribute('src');
             const imgAlt = this.querySelector('img').getAttribute('alt');
-            const title = this.querySelector('.gallery-title').textContent;
+          
             
             // Create modal
             const modal = document.createElement('div');
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div style="position: relative; max-width: 80%; max-height: 80%;">
                     <span style="position: absolute; top: -40px; right: 0; color: white; font-size: 30px; cursor: pointer;">&times;</span>
                     <img src="${imgSrc}" alt="${imgAlt}" style="max-width: 100%; max-height: 80vh; display: block; margin: 0 auto;">
-                    <div style="color: white; text-align: center; margin-top: 20px; font-family: 'Playfair Display', serif;">${title}</div>
+                    <div style="color: white; text-align: center; margin-top: 20px; font-family: 'Playfair Display', serif;"></div>
                 </div>
             `;
             
