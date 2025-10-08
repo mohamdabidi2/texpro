@@ -111,7 +111,10 @@
                         </div>
                         <div>
                             <h3>Email</h3>
-                            <p><a href="mailto:info@texprocorp.com">info@texprocorp.com</a></p>
+                            <p>
+                                <a href="mailto:biz.dev@texpro-kgroup.com.tn">biz.dev@texpro-kgroup.com.tn</a><br>
+                                <a href="mailto:slim.tounsi@texpro-kgroup.com.tn">slim.tounsi@texpro-kgroup.com.tn</a>
+                            </p>
                         </div>
                     </div>
                     
@@ -130,9 +133,9 @@
                 
                 <div class="contact-form" data-aos="fade-left" data-aos-delay="200">
                     <!-- 
-                        The form below uses Formsubmit (https://formsubmit.co/) to send the form data to m.abidi.contact@gmail.com.
+                        The form below uses Formsubmit (https://formsubmit.co/) to send the form data to both biz.dev@texpro-kgroup.com.tn and slim.tounsi@texpro-kgroup.com.tn.
                         This service does not require confirmation or registration for basic use.
-                        The only requirement is that the first submission will send a confirmation email to m.abidi.contact@gmail.com to verify the address.
+                        The only requirement is that the first submission will send a confirmation email to each address to verify it.
                         After that, all submissions will be sent directly.
                     -->
                     <form id="contactForm">
@@ -160,7 +163,8 @@
                             <label for="message" class="form-label">Message</label>
                             <textarea id="message" name="Message" class="form-control" required></textarea>
                         </div>
-                        
+                        <!-- Hidden field to send to both emails via Formsubmit -->
+                        <input type="hidden" name="_cc" value="slim.tounsi@texpro-kgroup.com.tn">
                         <button type="submit" class="btn">Send Message</button>
                     </form>
                     <div id="formStatus" style="margin-top:1em;"></div>
@@ -254,7 +258,8 @@
             // Add hidden fields for Formsubmit
             formData.append('_captcha', 'false');
             formData.append('_next', 'contact.html');
-            fetch('https://formsubmit.co/m.abidi.contact@gmail.com', {
+            // The main recipient is biz.dev@texpro-kgroup.com.tn, and _cc sends to slim.tounsi@texpro-kgroup.com.tn
+            fetch('https://formsubmit.co/biz.dev@texpro-kgroup.com.tn', {
                 method: 'POST',
                 body: formData,
                 headers: {
