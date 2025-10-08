@@ -129,34 +129,41 @@
                 </div>
                 
                 <div class="contact-form" data-aos="fade-left" data-aos-delay="200">
-                    <form>
+                    <!-- 
+                        The form below uses Formsubmit (https://formsubmit.co/) to send the form data to m.abidi.contact@gmail.com.
+                        This service does not require confirmation or registration for basic use.
+                        The only requirement is that the first submission will send a confirmation email to m.abidi.contact@gmail.com to verify the address.
+                        After that, all submissions will be sent directly.
+                    -->
+                    <form id="contactForm">
                         <div class="form-group">
                             <label for="firstName" class="form-label">First Name</label>
-                            <input type="text" id="firstName" class="form-control" required>
+                            <input type="text" id="firstName" name="First Name" class="form-control" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="lastName" class="form-label">Last Name</label>
-                            <input type="text" id="lastName" class="form-control" required>
+                            <input type="text" id="lastName" name="Last Name" class="form-control" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" class="form-control" required>
+                            <input type="email" id="email" name="Email" class="form-control" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="phone" class="form-label">Phone</label>
-                            <input type="tel" id="phone" class="form-control">
+                            <input type="tel" id="phone" name="Phone" class="form-control">
                         </div>
                         
                         <div class="form-group">
                             <label for="message" class="form-label">Message</label>
-                            <textarea id="message" class="form-control" required></textarea>
+                            <textarea id="message" name="Message" class="form-control" required></textarea>
                         </div>
                         
                         <button type="submit" class="btn">Send Message</button>
                     </form>
+                    <div id="formStatus" style="margin-top:1em;"></div>
                 </div>
             </div>
         </div>
@@ -234,5 +241,39 @@
     
     <!-- Custom JS -->
     <script src="js/premium-main.js"></script>
+    <!-- Email sending logic -->
+    <script>
+    // This script will send the form data to Formsubmit and show a status message
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('contactForm');
+        const statusDiv = document.getElementById('formStatus');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            statusDiv.textContent = "Sending...";
+            const formData = new FormData(form);
+            // Add hidden fields for Formsubmit
+            formData.append('_captcha', 'false');
+            formData.append('_next', 'contact.html');
+            fetch('https://formsubmit.co/m.abidi.contact@gmail.com', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    statusDiv.textContent = "Thank you! Your message has been sent.";
+                    form.reset();
+                } else {
+                    statusDiv.textContent = "There was an error sending your message. Please try again later.";
+                }
+            })
+            .catch(error => {
+                statusDiv.textContent = "There was an error sending your message. Please try again later.";
+            });
+        });
+    });
+    </script>
 </body>
 </html>
