@@ -197,4 +197,6 @@ document.addEventListener('DOMContentLoaded', function() {
             heroSection.style.backgroundPositionY = `-${translateY}px`;
         });
     }
+
+    // Language switcher is now handled by translations.js
 });

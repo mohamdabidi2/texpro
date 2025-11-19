@@ -171,25 +171,33 @@
                 </button>
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">ACCUEIL</a>
+                        <a href="index.html" class="nav-link" data-i18n="nav-home">ACCUEIL</a>
                     </li>
                     <li class="nav-item">
-                        <a href="about.html" class="nav-link">ABOUT US</a>
+                        <a href="about.html" class="nav-link" data-i18n="nav-about">ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                        <a href="departement.html" class="nav-link">DEPARTEMENT</a>
+                        <a href="departement.html" class="nav-link" data-i18n="nav-department">DEPARTEMENT</a>
                     </li>
                     <li class="nav-item">
-                        <a href="certificat.html" class="nav-link">CERTIFICAT</a>
+                        <a href="certificat.html" class="nav-link" data-i18n="nav-certificate">CERTIFICAT</a>
                     </li>
                     <li class="nav-item">
-                        <a href="showroom.html" class="nav-link">SHOWROOM</a>
+                        <a href="showroom.html" class="nav-link" data-i18n="nav-showroom">SHOWROOM</a>
                     </li>
                     <li class="nav-item">
-                        <a href="social-story.html" class="nav-link active">SOCIAL STORY</a>
+                        <a href="social-story.html" class="nav-link active" data-i18n="nav-social">SOCIAL STORY</a>
                     </li>
                     <li class="nav-item">
-                        <a href="contact.html" class="nav-link">CONTACT</a>
+                        <a href="contact.html" class="nav-link" data-i18n="nav-contact">CONTACT</a>
+                    </li>
+                    <!-- Language Switcher -->
+                    <li class="nav-item language-switcher-item">
+                        <div class="language-switcher">
+                            <a href="#" class="lang-link active" data-lang="fr">FR</a>
+                            <span class="lang-separator">|</span>
+                            <a href="#" class="lang-link" data-lang="en">EN</a>
+                        </div>
                     </li>
                 </ul>
             </nav>
@@ -199,15 +207,14 @@
     <!-- Page Title -->
     <section class="page-title">
         <div class="container">
-            <h1 data-aos="fade-up">OUR SOCIAL IMPACT</h1>
+            <h1 data-aos="fade-up" data-i18n="page-social">OUR SOCIAL IMPACT</h1>
         </div>
     </section>
 
     <!-- Video Showcase Section - Redesigned -->
     <section class="video-showcase-section">
         <div class="container">
-            <h2 data-aos="fade-up">Our Story in Motion</h2>
-            <p class="subtitle" data-aos="fade-up" data-aos-delay="100">
+            <p class="subtitle" data-aos="fade-up" data-aos-delay="100" data-i18n="social-subtitle">
                 Discover how Texpro Corp is weaving sustainability, innovation, and social responsibility into every thread of our business
             </p>
             
@@ -217,7 +224,7 @@
                 <!-- Video 3 -->
                 <div class="video-container" data-aos="fade-up" data-aos-delay="400">
                     <div class="video-wrapper">
-                        <video class="video-player">
+                        <video class="video-player" id="videoStory3">
                             <source src="videos/videoStory3.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -236,32 +243,32 @@
         <div class="container footer-container">
             <div class="footer-section">
                 <h3 class="footer-title">TEXPRO CORP</h3>
-                <p>Textile manufacturer since 1998 based in Tunisia in the EUR-MED zone. Specialized in denim and flat garment manufacturing.</p>
+                <p data-i18n="footer-company-desc">Textile manufacturer since 1998 based in Tunisia in the EUR-MED zone. Specialized in denim and flat garment manufacturing.</p>
                 <div class="social-icons">
                     <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
                     <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.linkedin.com/company/texpro-corp" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
             
             <div class="footer-section">
-                <h3 class="footer-title">Quick Links</h3>
+                <h3 class="footer-title" data-i18n="footer-quick-links">Quick Links</h3>
                 <ul class="footer-links">
-                    <li class="footer-link"><a href="index.html">Home</a></li>
-                    <li class="footer-link"><a href="about.html">About Us</a></li>
-                    <li class="footer-link"><a href="departement.html">Departments</a></li>
-                    <li class="footer-link"><a href="certificat.html">Certificates</a></li>
-                    <li class="footer-link"><a href="showroom.html">Showroom</a></li>
-                    <li class="footer-link"><a href="social-story.html">Social Story</a></li>
-                    <li class="footer-link"><a href="contact.html">Contact</a></li>
+                    <li class="footer-link"><a href="index.html" data-i18n="footer-home">Home</a></li>
+                    <li class="footer-link"><a href="about.html" data-i18n="footer-about">About Us</a></li>
+                    <li class="footer-link"><a href="departement.html" data-i18n="footer-departments">Departments</a></li>
+                    <li class="footer-link"><a href="certificat.html" data-i18n="footer-certificates">Certificates</a></li>
+                    <li class="footer-link"><a href="showroom.html" data-i18n="footer-showroom">Showroom</a></li>
+                    <li class="footer-link"><a href="social-story.html" data-i18n="footer-social">Social Story</a></li>
+                    <li class="footer-link"><a href="contact.html" data-i18n="footer-contact">Contact</a></li>
                 </ul>
             </div>
             
             <div class="footer-section">
-                <h3 class="footer-title">Contact Info</h3>
+                <h3 class="footer-title" data-i18n="footer-contact-info">Contact Info</h3>
                 <p><i class="fas fa-map-marker-alt"></i> Av. Habib Bourguiba-5015 Bouhjar</p>
-                <p><i class="fas fa-phone"></i> +216 73 434 250</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+21673434250" style="color: rgba(255, 255, 255, 0.7);">+216 73 434 250</a> / <a href="tel:+21673434249" style="color: rgba(255, 255, 255, 0.7);">+216 73 434 249</a></p>
                 <p><i class="fas fa-fax"></i> +216 73 434 251</p>
                 <p><i class="fas fa-globe"></i> www.texprocorp.com</p>
             </div>
@@ -269,14 +276,17 @@
         
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2025 TEXPRO CORP. All Rights Reserved.</p>
-                <p>NOTHING IS MORE EXPENSIVE THAN A BAD QUALITY.</p>
+                <p>&copy; 2025 TEXPRO CORP. <span data-i18n="footer-copyright">All Rights Reserved.</span></p>
+                <p data-i18n="footer-slogan">NOTHING IS MORE EXPENSIVE THAN A BAD QUALITY.</p>
             </div>
         </div>
     </footer>
 
     <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!-- Translation JS -->
+    <script src="js/translations.js"></script>
     
     <!-- Custom JS -->
     <script src="js/premium-main.js"></script>
@@ -290,6 +300,31 @@
                 easing: 'ease',
                 once: true
             });
+            
+            // Generate thumbnail at 0:03 (3 seconds)
+            const video = document.getElementById('videoStory3');
+            if (video) {
+                video.addEventListener('loadedmetadata', function() {
+                    // Set video to 0:03 (3 seconds)
+                    video.currentTime = 3;
+                });
+                
+                video.addEventListener('seeked', function() {
+                    // Create canvas to capture frame
+                    const canvas = document.createElement('canvas');
+                    canvas.width = video.videoWidth;
+                    canvas.height = video.videoHeight;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                    
+                    // Convert canvas to image and set as poster
+                    const thumbnail = canvas.toDataURL('image/jpeg');
+                    video.setAttribute('poster', thumbnail);
+                    
+                    // Reset video to beginning
+                    video.currentTime = 0;
+                });
+            }
             
             // Video overlay click handlers
             const videoOverlays = document.querySelectorAll('.video-overlay');
