@@ -141,7 +141,7 @@
                 
                 <div class="contact-form" data-aos="fade-left" data-aos-delay="200">
                     <!-- 
-                        The form below uses Formsubmit (https://formsubmit.co/) to send the form data to both biz.dev@texpro-kgroup.com.tn and slim.tounsi@texpro-kgroup.com.tn.
+                        The form below uses Formsubmit (https://formsubmit.co/) to send the form data to slim.tounsi@texpro-kgroup.com.tn as the main recipient and biz.dev@texpro-kgroup.com.tn in CC.
                         This service does not require confirmation or registration for basic use.
                         The only requirement is that the first submission will send a confirmation email to each address to verify it.
                         After that, all submissions will be sent directly.
@@ -171,8 +171,8 @@
                             <label for="message" class="form-label" data-i18n="form-message">Message</label>
                             <textarea id="message" name="Message" class="form-control" required></textarea>
                         </div>
-                        <!-- Hidden field to send to both emails via Formsubmit -->
-                        <input type="hidden" name="_cc" value="slim.tounsi@texpro-kgroup.com.tn">
+                        <!-- Hidden field to CC biz.dev@texpro-kgroup.com.tn via Formsubmit -->
+                        <input type="hidden" name="_cc" value="biz.dev@texpro-kgroup.com.tn">
                         <button type="submit" class="btn" data-i18n="form-send">Send Message</button>
                     </form>
                     <div id="formStatus" style="margin-top:1em;"></div>
@@ -269,8 +269,8 @@
             // Add hidden fields for Formsubmit
             formData.append('_captcha', 'false');
             formData.append('_next', 'contact.html');
-            // The main recipient is biz.dev@texpro-kgroup.com.tn, and _cc sends to slim.tounsi@texpro-kgroup.com.tn
-            fetch('https://formsubmit.co/biz.dev@texpro-kgroup.com.tn', {
+            // The main recipient is slim.tounsi@texpro-kgroup.com.tn, and _cc sends to biz.dev@texpro-kgroup.com.tn
+            fetch('https://formsubmit.co/slim.tounsi@texpro-kgroup.com.tn', {
                 method: 'POST',
                 body: formData,
                 headers: {
