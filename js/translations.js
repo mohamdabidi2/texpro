@@ -16,7 +16,7 @@ const translations = {
         'hero-subtitle': 'Fabricants de Textiles Depuis 1998',
         'btn-contact': 'Contactez-nous',
         'section-heritage': 'Notre Héritage',
-        'heritage-text1': 'TEXPRO CORP, une filiale du Groupe Kassab, est un fabricant de textiles depuis 1998 basé en Tunisie dans la zone EUR-MED. A été fondé en association avec des partenaires italiens.',
+        'heritage-text1': 'TEXPRO CORP est un fabricant de textile depuis 1998 situé en Tunisie dans la zone EUR-MED et a été fondé en association avec des partenaires européens.',
         'heritage-text2': 'Au fil des ans, Texpro Corp a rapidement évolué pour devenir un fabricant de vêtements intégré certifié GOTS, BSCI, BCI, OCS poursuivant le cycle de production complet en se concentrant sur la durabilité tout au long du processus, des tissus à la fabrication, au lavage et à la teinture.',
         'heritage-text3': 'L\'entreprise est spécialisée dans la fabrication de vêtements en denim et plats et le portefeuille de produits comprend des robes décontractées, des chemises, des vestes, des pantalons et des manteaux pour hommes, femmes et enfants.',
         'quote-text': 'Chez Texpro Corp, nous nous associons de plus en plus à nos clients pour garantir une qualité élevée et constante sur les produits et investissons dans l\'innovation pour aider à améliorer l\'impact environnemental en produisant constamment des produits produits de manière responsable.',
@@ -406,7 +406,8 @@ function translatePage(lang) {
 
 // Initialize translation on page load
 document.addEventListener('DOMContentLoaded', function() {
-    const savedLang = localStorage.getItem('preferredLanguage') || 'fr';
+    // Use saved language if available, otherwise default to English
+    const savedLang = localStorage.getItem('preferredLanguage') || 'en';
     translatePage(savedLang);
     
     // Language switcher click handlers
